@@ -1,0 +1,29 @@
+{
+  "name": "your-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio website showcasing my projects and skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radwane212"
+  },
+  "keywords": [
+    "portfolio",
+    "web development",
+    "projects"
+  ],
+  "homepage": "https://yourwebsite.com",
+  "bugs": {
+    "url": "https://github.com/radwane212"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

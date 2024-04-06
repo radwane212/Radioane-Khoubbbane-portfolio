@@ -1,0 +1,449 @@
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik Spray Paint", system-ui;
+
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #c2a6a6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #007bff;
+}
+
+/* Logo styles */
+.logo img {
+  height: auto;
+  width: 100px; /* Adjust based on your logo's size */
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Button styles */
+.h-btn {
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.h-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+}
+
+/* Add some breathing room around the content */
+header {
+  margin-bottom: 20px;
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li a {
+    margin: 5px 0; /* Spacing between links in mobile view */
+  }
+}
+
+section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #1622ce; /* Ensure text is readable against the new background */
+}
+
+.container {
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Image styles */
+.img-fluid {
+  position: top right;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  border-radius: 50%; /* Changed border-radius */
+  transition: transform 0.3s ease;
+}
+
+/* Dynamic Title Styles */
+h1 {
+  font-family: "Rubik Spray Paint", system-ui;
+  font-size: 2.5rem; /* Larger font size */
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Text shadow for depth */
+  animation: popIn 0.5s ease-out forwards; /* Animation added */
+}
+
+/* Icon Enhancements */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.social a i {
+  font-size: 24px; /* Bigger icons */
+  animation: spin 4s linear infinite;
+}
+
+.social a:hover {
+  color: #41f5ec;
+}
+
+/* Animated button */
+.h-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #2ae923;
+  color: #fd6c6c;
+}
+
+/* Animated icons */
+.social a i {
+  animation: spin 2s linear infinite;
+}
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.home-content {
+    flex-basis: 60%;
+}
+.home-content p {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: moveUpDown 4s linear infinite; /* Added animation to move up and down */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.home-image {
+    flex-basis: 35%;
+}
+.home-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Section Styles */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f7f7f7; /* Light background color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* About Content Styles */
+.about-content {
+  flex-basis: 60%;
+}
+
+/* Paragraph and List Styles */
+.about-content p,
+.about-content ul {
+  background-color: #fff; /* White background color */
+  padding: 20px;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Spacing between paragraphs and list */
+}
+
+/* List Item Style */
+.about-content li {
+  margin-left: 20px; /* Indent list items */
+}
+
+/* About Image Styles */
+.about-image {
+  flex-basis: 35%;
+}
+
+/* Image Styles */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Skills Section Styles */
+.skills-section {
+  text-align: center; /* Center align content */
+  padding: 50px 0; /* Add padding */
+}
+
+/* Skills Title Styles */
+.skills-title {
+  font-size: 2rem; /* Larger font size */
+  color: #333; /* Dark color for contrast */
+  margin-bottom: 30px; /* Add spacing */
+}
+
+/* Skills Container Styles */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Skill Styles */
+.skill {
+  margin: 0 20px 30px; /* Add spacing around skills */
+}
+
+/* Skill Image Styles */
+.skill img {
+  width: 80px; /* Set width of skill icons */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+/* Skill Name Styles */
+.skill-name {
+  margin-top: 10px; /* Add spacing between image and name */
+  font-weight: bold; /* Bold font for skill names */
+}
+
+/* Hover Effect for Skill Images */
+.skill img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.services-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.service-info {
+  padding: 20px;
+}
+
+.service-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.projects {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.projects h2 {
+  color: #333;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.project {
+  margin: 0 20px;
+}
+
+.project img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project p {
+  color: #666;
+  margin-top: 10px;
+}
+
+.project img:hover {
+  transform: scale(1.1);
+}
+
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+textarea {
+  height: 100px;
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+
